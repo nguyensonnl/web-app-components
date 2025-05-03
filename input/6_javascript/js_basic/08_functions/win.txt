@@ -1,0 +1,137 @@
+/*
+
+Type of function;
+.Declare
+.Express
+.Return
+.Arrow
+
+Function advanced
+
+*/
+
+//declare:
+function sayHi() {
+  console.log("Hello");
+}
+
+//return
+function getName() {
+  return "Helo";
+}
+
+//express
+const a = function () {
+  console.log("Say something");
+};
+
+//arrow
+const arrow = () => {
+  console.log("Say something");
+};
+
+//1. Function scoping
+function foo() {
+  var a = "Hello";
+  console.log(a); //Hello
+}
+console.log(a); //Reference Error
+//Nested function
+function foo() {
+  var a = "Hello";
+
+  function boo() {
+    var b = "world";
+    console.log(a); // Hello
+    console.log(b); //World
+  }
+
+  console.log(a); //Hello
+  console.log(b); //Reference Error
+}
+console.log(a); //Reference Error
+console.log(b); //Reference Error
+
+//Lấy phạm vi gần nhất
+var a1 = "Hello";
+function foo() {
+  var b = "World";
+  function boo() {
+    var c = "Lisa";
+    console.log(a1);
+    console.log(b);
+    console.log(c);
+    console.log(d); //Reference Error
+  }
+  boo();
+}
+foo();
+//Lấy phạm vi gần nhất
+var a2 = "Hello";
+function boo2() {
+  var a2 = "World";
+  function bar() {
+    console.log(a2); //World
+  }
+  bar();
+}
+boo2();
+//Verson > 6
+function boo() {
+  const a = true;
+  function bar() {
+    const a = false; //different variable
+    console.log(a); //false
+  }
+
+  //const a = true; //syntax error
+  //a = false; //TypeError
+  console.log(a); //true
+}
+
+//2. Currying Function
+var currying1 = function (l, w, h) {
+  return l * w * h;
+};
+function currying2(l) {
+  return function (w) {
+    return function (h) {
+      return l * h * w;
+    };
+  };
+}
+//verson > 6
+var currying3 = (l) => (w) => (h) => l * w * h;
+console.log(currying3(10)(20)(30));
+
+//3. Immediately Invoked Function Expresssions(IIFE)
+(function () {
+  console.log("Lisa From BlackPInk");
+})();
+
+(function (msg) {
+  console.log(msg);
+})("Hello world");
+
+var example = (function () {
+  return 10;
+})();
+console.log(example);
+
+(function namedIIFE() {
+  throw error;
+})();
+//Verson > 6
+(() => console.log("Hello world"))();
+
+//4. Named Functions
+//named or unname(anonymous function)
+var namedSum = function sum(a, b) {
+  return a + b;
+}; //named
+var anonSum = function (a, b) {
+  return a + b;
+}; ///anonymous
+
+//named function are hoisted
+//anonymous not hoisted

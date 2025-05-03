@@ -1,0 +1,4 @@
+nhúng file css vào file html
+internal: <style></style>
+external: file css
+<div style = "bgcolor: red"></div>

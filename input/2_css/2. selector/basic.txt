@@ -1,0 +1,29 @@
++: all
+*{
+
+}
+
++ID:
+#id{
+
+}
+
++Class
+.class{
+
+}
+
++tag
+p{
+
+}
+
++nhiều element
+ul, li {
+
+}
+
++cả 2 element
+.a.b{
+
+}

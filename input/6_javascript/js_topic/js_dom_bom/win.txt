@@ -1,0 +1,37 @@
+#mouse events
+1. click
+2. dbclick
+3. mousedown
+4. mouseup
+5. mousemove
+
+#keyboard events
+1. keydown
+2. keyup
+
+#form events
+1. submit
+2. change
+3. focus
+4. blur
+
+#window event
+1. load
+2. unload
+3. resize
+4. scroll
+
+#document vent
+1. DOMContentLoaded
+2. readystatechange
+
+#touch event
+1. touchstart
+2. touchend
+3. tochmove
+
+#custom events
+you can also create and dispatch custom events using the CustomEvent constructor
+
+stopPropagation();
+preventDefault();

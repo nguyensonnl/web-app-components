@@ -1,0 +1,45 @@
+#color
+1. color: value;
+2. background-color: value;
+3. box-shawdow: value;
+
+#image:
+
+#text:
+1. color: value;
+2. text-algin: value;
+3. text-align-last: value;
+4. direction: rtl;
+5. unicode-bidl: bidi-overide;
+8. vertical-align: value;
+9. text-decoration-(line/color/style/thickness): value;
+10. text-transform: value;
+11. text spacing:
+text-indent: value;
+letter-spacing: value;
+word-spacing: value;
+white-space: value;
+line-height: value;
+12. text-shawdow: ltr ttb shawdow color;
+
+#font:
+
+
+
+#background
+
+#box model
+1. width: value;
+2. max-width: value;
+3. min-width: value;
+4. height: value;
+5. max-height: value;
+6. min-height: value;
+7. pading: value;
+8. border: value;
+9. margin: value;
+
+#display
+1. display: value;
+
+#animation

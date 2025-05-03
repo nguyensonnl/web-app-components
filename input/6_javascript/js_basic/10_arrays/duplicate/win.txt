@@ -1,0 +1,5 @@
+1. Remove eleemnt duplicate
+2. Kiểm tra element duplicate
+3. Hiển thị element duplicate đầu tiên có trong array
+4. Hiển thị các element duplicate array
+5. Đếm elmenet dulicate có trong array

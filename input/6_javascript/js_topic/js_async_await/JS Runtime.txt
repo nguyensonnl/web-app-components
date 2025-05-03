@@ -1,0 +1,7 @@
+javascript runtime
+
+heap, call stack
+event loop
+web api
+message queue
+job queue

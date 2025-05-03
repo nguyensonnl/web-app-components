@@ -1,0 +1,4 @@
+đưa khai báo lên trên đầu phạm vi
+
+console.log(a);
+let a = 10;

@@ -1,0 +1,41 @@
+#aspect ratio trick
+img {
+width: 100%;
+object-fit: cover
+}
+
+#one-line centering
+.parent{
+display: grid;
+place-items: center;
+height: 100vh;
+}
+
+#scrollbar styling
+::-webkit-scrollbar{
+width: 10px;
+}
+::-webkit-scrollbar-thumb{
+background: #3498db;
+border-radius: 5px;
+}
+
+#text trunction
+.text{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 200px;
+}
+
+#responsive grid
+.container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr);
+gap: 20px;
+}
+
+#using: has()
+.card:has(img){
+border: 2px soild #333;
+}

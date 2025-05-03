@@ -1,0 +1,24 @@
+#1. create element
+document.createElement("element")
+const li = document.createElement("li");
+#thêm class
+li.className = "colection-item";
+#thêm id
+li.id = "new-item";
+#thêm thuộc tính title
+li.setAttribute("title", "new item");
+#tạo một text bên trong thẻ li
+li.appendChild(document.createTextNode("Hello world"))
+
+#tạo một thẻ a
+const link = document.createElement("a");
+#thêm nhiều class
+link.className = "delete-item secondary-content"
+#gắn nội dung html bên trong thẻ a là một đoạn html mới
+link.innerHTML = '<i class="fa fa-remove"></li>'
+
+#thêm thẻ a vào dưới thẻ li
+li.appendChild(link)
+
+#thêm thẻ li vào dưới element ul
+document.querySelector("ul.colection").appendChild(li)

@@ -1,0 +1,3 @@
+#các phiên bản mới nhất của JS
+
+1_arrow function

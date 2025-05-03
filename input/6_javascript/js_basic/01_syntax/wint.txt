@@ -1,0 +1,23 @@
+Cách nhúng js vào html
+
+input
+output
+
++nodejs
+console.log()
+
++browser
+document.write()
+
+Syntax
+Setup
+Cách nhúng js vào html:
+.File .js
+.<script></script>
+
+Sử dụng các câu lệnh console
+Sử dụng tab console trên dev tool
+Popup
+alert
+confirm
+prompt

@@ -1,0 +1,14 @@
+let number = 10;
+let number1 = 5.5;
+let string = "hello world";
+let boolean = true;
+let isNull = null;
+let x;
+console.log(x)//undefined
+
+
+let arr = [1,2,3,4,5];
+let obj = {
+    name: "Vũ Thị Ngọc HUyền",
+    age: 30, 
+}

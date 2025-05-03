@@ -1,0 +1,9 @@
+#hoisting:
+đưa khái báo lên trên đầu phạm vi
+
+#scope:
+global scope
+function scope
+block scope: {}
+
+#empty, null, undefined

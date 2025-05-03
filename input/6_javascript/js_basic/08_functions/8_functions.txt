@@ -1,0 +1,20 @@
+#named function
+function hello(){
+    console.log("Hello world);
+}
+
+#express function
+const a = funciton (){
+    console.log("Hello world);
+}
+
+#return function
+function sum(a, b){
+    return a + b;
+}
+
+#parameters, arguments
+function sum (a, b){
+    return a + b;
+}
+sum(10, 10)

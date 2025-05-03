@@ -1,0 +1,849 @@
++old
+21. Thực hành với DOM
+21.1 Giới thiệu chương thực hành với DOM
+21.2 Thực hành xây dựng Todo App #1
+21.3 Thực hành xây dựng Todo App #2
+21.4 Thực hành xây dựng Todo App #3
+21.5 Thực hành xây dựng Todo App #4
+
++new
+21.1 Giới thiệu chương thực hành
+21.2 Render tasks ra giao diện
+21.3 Bài tập render tasks ra giao diện
+21.4 Thêm công việc mới
+21.5 Bài tập thêm công việc mới
+21.6 Chỉnh sửa công việc
+21.7 Đánh dấu hoàn thành và xóa
+21.8 Hiển thị "Empty message" khi task rỗng
+21.9 Sửa lỗi tiêu đề công việc bị null
+21.10 Kiểm tra trùng tiêu đề công việc
+21.11 Tối ưu logic kiểm tra trùng tiêu đề
+21.12 Lưu dữ liệu vào localStorage
+21.13 localStorage lưu được gì?
+21.14 JSON trong JavaScript là gì?
+21.15 Sửa lỗi và tìm hiểu về dataset
+21.16 Tại sao nên dùng dataset?
+21.17 Tránh XSS với escapeHTML
+21.18 Xây dựng giao diện cho Modal
+21.19 Xử lý mở và đóng Modal
+21.20 Xử lý để nhiều Modal cùng hoạt động
+21.21 Thiết kế Modal contructor
+21.22 Lấy nội dung Modal từ template
+21.23 Thêm một lý do để dùng cloneNode
+21.24 Nhấn backdrop không đóng và khóa cuộn
+21.25 Khóa cuộn trang khi mở modal để làm gì?
+21.26 Khắc phục giật nội dung khi ẩn/hiện thanh cuộn
+21.27 Tạo hàm getScrollbarWidth
+21.28 Tối ưu hàm getScrollbarWidth
+21.29 Phát triển Modal linh hoạt hơn
+21.30 Sửa logic Modal đáp ứng options mới
+21.31 Thêm tùy chọn destroyOnClose
+21.32 Xử lý gọi lại khi mở và đóng Modal
+21.33 Thêm tùy chọn footer cho Modal
+21.34 Thêm phương thức addFooterButton
+21.35 Sửa lỗi khi nhấn ESC và xử lý mở nhiều Modal
+21.36 Tối ưu tránh lặp logic trong Modal
+21.37 Chuyển phương thức thành prototype
+21.38 Chia sẻ cách tư duy đặt tên thư viện
+21.39 Minify và deploy thư viện Popzy
+21.40 Tạo trang Demo và hướng dẫn dùng Popzy
+21.41 Thêm options content cho Popzy
+21.42 Xử lý các vấn đề liên quan tới khóa cuộn
+21.43 Sửa lỗi không khóa cuộn theo mặc định
+21.44 Cách release phiên bản mới trên Github
+21.45 Hoàn thiện phần Demo cho Popzy
+21.46 Giới thiệu dự án Tabzy
+21.47 Xây dựng logic khởi tạo cho Tabzy
+21.48 Tạo phương thức switch và destroy
+21.49 Xây dựng tính năng ghi nhớ tab
+21.50 Hiểu rõ về lỗi không ghi nhớ tab
+21.51 Tìm hiểu về query parameters
+21.52 Sử dụng query params thay cho hash
+21.53 Xử lý ghi nhớ đồng thời nhiều tab
+21.54 Thêm onChange khi tab thay đổi
+21.55 Tối ưu logic cho option onChange
+21.56 Tối ưu code thư viện Tabzy
+21.57 Áp dụng thư viện Tabzy
+21.58 Tạo hiệu ứng trượt cho activeLine
+
+20. Làm việc với DOM
+20.1 Lưu ý trước khi học DOM
+20.2 Kiến thức nền tảng khi học DOM?
+20.3 Tìm hiểu sơ bộ về DOM
+20.4 JavaScript có thể làm gì với DOM?
+20.5 Các bước trình duyệt tạo phần tử DOM?
+20.6 Document và phân loại các node
+20.7 Đối tượng document trong DOM là gì?
+20.8 DOM có những loại node phổ biến nào?
+20.9 Lưu ý khi lấy phần tử trong DOM
+20.10 Lưu ý gì khi lấy phần tử trong DOM?
+20.11 Cách lấy phần tử theo ID
+20.12 Đâu là cách lấy phần tử qua ID?
+20.13 Kiểm tra tồn tại của phần tử trong DOM?
+20.14 Tránh sử dụng biến được tự động tạo?
+20.15 Tạo hàm changeElementTextById
+20.16 Lấy phần tử theo Tag/Class name
+20.17 getElementById khác gì getElementsByTagName?
+20.18 Dấu hiệu nhận biết phương thức trả về danh sách?
+20.19 Thay đổi nội dung của thẻ h2 thứ 2?
+20.20 Tạo hàm countElementsByTag
+20.21 Tạo hàm highlightElementsByClass
+20.22 Lấy phần tử theo CSS selectors
+20.23 Phân biệt bộ chọn với CSS selector
+20.24 Ưu điểm của bộ chọn với CSS selector
+20.25 Lấy phần tử theo CSS selector
+20.26 Thuộc tính innerText và innerHTML
+20.27 Thay đổi nội dung HTML của phần tử?
+20.28 Phân biệt innerHTML và innerText?
+20.29 Tạo hàm renderList
+20.30 Phân biệt outerHTML và innerHTML
+20.31 outerHTML khác gì innerHTML?
+20.32 Khác nhau giữa innerText và textContent
+20.33 Khác biệt chính giữa textContent và innerText?
+20.34 HTMLCollection, NodeList và Array
+20.35 Quản lý HTML attributes của phần tử
+20.36 Phân biệt attribute và property
+20.37 Khác biệt giữa Attribute và Property?
+20.38 Attribute value của input có thay đổi theo property?
+20.39 Property value của input có thay đổi theo attribute?
+20.40 Làm việc với class của phần tử
+20.41 Làm việc với style của phần tử
+20.42 Viết pseudo classes với CSS rules
+20.43 Có thể truyền nhiều rule vào insertRule?
+20.44 Tìm hiểu hàm getComputedStyle
+20.45 Tạo mới phần tử và gắn vào DOM
+20.46 Tấn công XSS và cách phòng tránh
+20.47 Phòng tránh XSS với DOMPurify
+20.48 Tạo Node mới và làm việc với chúng
+20.49 Tìm hiểu về Fragment Node
+20.50 Kiểm tra thông tin cơ bản của Node
+20.51 Tìm kiếm và kiểm tra các Node
+20.52 Truy cập cấu trúc DOM xung quanh Node
+20.53 Các cách lấy kích thước của Element
+20.54 Cách xác định vị trí của Element
+20.55 Xử lý cuộn trên Element
+20.56 Tìm hiểu về DOM events
+20.57 Tìm hiểu về các đối tượng Event
+20.58 Từ khóa this trong hàm xử lý event
+20.59 DOM events thông qua HTML attributes
+20.60 Hệ thống kế thừa DOM events
+20.61 Sự kiện nổi bọt (Event bubbling)
+20.62 Ứng dụng của event bubbling
+20.63 Phân biệt e.target và e.currentTarget
+20.64 Tìm hiểu về Event capture
+20.65 Tìm hiểu stopImmediatePropagation()
+20.66 Tìm hiểu preventDefault()
+
+19. Thời gian và Ngày tháng
+19.1 Hàm Date, Timestamp và ISO 8601
+15:34
+19.2 Khi nào hàm Date trả về đối tượng?
+00:16
+19.3 Giá trị trả về bởi Date.now() là gì?
+00:20
+19.4 Khái niệm Timestamp là gì?
+00:18
+19.5 Đâu là định dạng ISO 8601?
+00:20
+19.6 Tạo hàm timeElapsed
+04:56
+19.7 Tạo hàm timeDiff #1
+06:07
+19.8 Tạo hàm timeDiff #2
+05:22
+19.9 Các cách tạo đối tượng Date
+06:54
+19.10 Tạo đối tượng Date cho thời điểm cụ thể
+04:17
+19.11 Cách kiểm tra đối tượng Date hợp lệ
+02:44
+19.12 Tạo hàm isValidDateString
+03:42
+19.13 Tạo hàm isValidDate
+03:13
+19.14 Các phương thức của đối tượng Date
+07:16
+19.15 Phương thức getTime, getTimezoneOffset
+08:20
+19.16 Tạo hàm timeAgo
+04:57
+19.17 Chuyển đổi object Date sang chuỗi
+05:15
+19.18 Tạo hàm formatToISO
+02:30
+
+18. Số học và Math
+18.1 Ôn lại kiến thức đã học về số
+10:47
+18.2 3e6 là viết rút gọn của giá trị nào?
+00:15
+18.3 Biến result có giá trị là gì?
+00:21
+18.4 NaN so sánh với giá trị nào trả về true?
+00:11
+18.5 Viết hàm calculateExpression
+05:23
+18.6 NaN và các cách kiểm tra khác
+07:41
+18.7 Cách kiểm tra chính xác NaN?
+00:18
+18.8 Cách nào không an toàn để kiểm tra NaN?
+00:35
+18.9 Viết hàm isExactlyNaN
+01:19
+18.10 Viết hàm isValidNumber
+03:13
+18.11 Viết hàm countNaNValues
+07:42
+18.12 Tạo hàm comparePrimitives
+08:28
+18.13 Tham số radix của parseInt là gì?
+00:16
+18.14 Khoảng giá trị của radix trong parseInt?
+00:16
+18.15 Giá trị của parseInt(x, 1) là gì?
+00:23
+18.16 Điền vào giá trị phù hợp cho radix
+00:32
+18.17 Viết hàm safeParseInt
+04:16
+18.18 Tạo hàm parseIntSum
+07:04
+18.19 Tìm hiểu về giá trị Infinity
+05:12
+18.20 Kết quả khi chia số dương cho 0?
+00:13
+18.21 Cách hoạt động của isFinite()?
+00:16
+18.22 Tạo hàm findMax
+03:26
+18.23 Tạo hàm findMin
+01:34
+18.24 Tìm hiểu đối tượng Math
+09:46
+18.25 Tạo hàm mathOperations
+03:48
+18.26 Tạo hàm deliveryCostCalculator
+08:17
+18.27 Tạo hàm formatDuration
+07:49
+18.28 Tạo hàm coinFlip
+02:16
+18.29 Tạo hàm luckyDraw
+03:29
+18.30 Tạo hàm bauCuaRoll
+04:50
+18.31 Tạo hàm placeBet
+06:32
+18.32 Xây dựng hàm đọc 3 chữ số
+17:01
+18.33 Tạo hàm readThreeDigits
+07:43
+18.34 Xử lý trường hợp "mười", "mốt", "lăm"
+11:01
+18.35 Update hàm readThreeDigits #1
+04:16
+18.36 Xử lý đọc 3 số trong bậc số lớn
+06:08
+18.37 Update hàm readThreeDigits #2
+03:47
+18.38 Chia nhỏ số lớn và đọc từng nhóm
+12:25
+18.39 Tạo hàm readMoney
+03:46
+18.40 Xử lý đọc số lẻ cho hàm readMoney
+04:41
+18.41 Update hàm readMoney
+03:04
+
+17. Xử lý Chuỗi
+17.1 Tổng quan làm việc với chuỗi
+02:25
+17.2 Truy cập chuỗi
+08:28
+17.3 Truy cập ký tự trong chuỗi
+00:41
+17.4 Truy cập chuỗi với chỉ số âm
+00:18
+17.5 Tạo hàm getStringLength
+03:21
+17.6 Xử lý chuỗi căn bản
+13:44
+17.7 Khác biệt giữa substring và slice?
+00:21
+17.8 Tạo hàm compareStrings
+03:15
+17.9 Tạo hàm reverseString
+05:57
+17.10 Tạo hàm reverseWordsInSentence
+08:44
+17.11 Tạo hàm findLongestWord
+06:45
+17.12 Tạo hàm truncateString
+09:26
+17.13 Tạo hàm truncateByWords
+07:55
+17.14 Tạo hàm truncateByWordsTrimmed
+08:24
+17.15 Chuyển đổi kiểu chữ
+02:40
+17.16 Tạo hàm isPalindrome
+07:32
+17.17 Tạo hàm capitalize
+08:29
+17.18 Kiểm tra và tìm kiếm trong chuỗi
+15:03
+17.19 Tạo hàm countVowels
+07:28
+17.20 Thay thế nội dung chuỗi
+05:35
+17.21 Xóa khoảng trắng thừa trong chuỗi
+02:52
+17.22 Tạo hàm capitalizeFirst
+06:41
+17.23 Đệm thêm chuỗi với padStart và padEnd
+07:35
+17.24 Tạo hàm formatTime
+06:06
+17.25 Tạo hàm formatCardNumber #1
+06:07
+17.26 Tạo hàm formatCardNumber #2
+08:22
+17.27 Tìm hiểu cơ bản về mã hóa UTF
+08:34
+17.28 Tạo hàm isStrongPassword
+08:28
+17.29 Chuyển đổi chữ HOA-thường với charCode #1
+08:28
+17.30 Chuyển đổi chữ HOA-thường với charCode #2
+04:24
+17.31 Xử lý chuỗi có chứa Emoji
+09:07
+17.32 Tạo hàm countCharacters
+03:37
+17.33 Tạo hàm sliceString
+06:20
+17.34 Tìm hiểu bảng mã ký tự ASCII
+07:39
+17.35 Tại sao Unicode kế thừa ASCII?
+00:32
+17.36 Tại sao ASCII chỉ có 128 ký tự?
+00:17
+17.37 Tạo hàm convertToAscii
+07:03
+17.38 Tìm hiểu các bảng mã Unicode
+06:56
+17.39 Kích thước byte của UTF-8?
+00:14
+17.40 Kích thước byte của UTF-16?
+00:15
+17.41 Kích thước byte của UTF-32?
+00:11
+
+16. Làm việc với Arrays
+16.1 Tổng quan làm việc với mảng
+05:46
+16.2 Làm việc với mảng cơ bản
+15:08
+16.3 Tạo hàm removeUndefined
+08:00
+16.4 Tổng hợp bài tập với mảng #1
+12:44
+16.5 Phương thức slice() và splice()
+14:35
+16.6 Phương thức concat() và flat()
+05:50
+16.7 Phương thức forEach()
+17:27
+16.8 Thiết kế phương thức forEach2
+11:08
+16.9 Tạo phương thức forEach2
+05:59
+16.10 Sử dụng thisValue trong forEach
+11:02
+16.11 Phương thức find() và findIndex()
+15:46
+16.12 Tạo phương thức find2
+06:33
+16.13 Tạo phương thức findIndex2
+03:17
+16.14 Phương thức filter()
+11:37
+16.15 Tạo phương thức filter2
+04:31
+16.16 Phương thức map()
+11:20
+16.17 Tạo phương thức map2
+06:26
+16.18 Phương thức every() và some()
+18:21
+16.19 Phương thức reduce()
+19:05
+16.20 Phương thức sort()
+12:13
+16.21 Các cách sao chép mảng
+06:46
+16.22 Cách tra cứu phương thức mảng
+
+15. Objects nâng cao
+15.1 Primitive và Reference types
+18:52
+15.2 Nơi lưu trữ giá trị của Primitive types?
+00:17
+15.3 Tính bất biến của Primitive types?
+00:21
+15.4 Điều gì xảy ra khi sao chép kiểu nguyên thủy?
+00:35
+15.5 Điều gì xảy ra khi sao chép kiểu tham chiếu?
+00:36
+15.6 Bản chất của việc sao chép biến là gì?
+00:54
+15.7 Tạo hàm deepCopy
+04:24
+15.8 Các cách so sánh objects
+08:57
+15.9 Kết quả so sánh 2 objects khác nhau?
+00:21
+15.10 Cách nào có thể sử dụng để so sánh sâu?
+00:18
+15.11 Pass by value và Pass by reference
+12:21
+15.12 Điều gì xảy ra khi truyền biến vào hàm?
+00:23
+15.13 Tại sao có hiểu lầm JS có Pass by reference?
+00:24
+15.14 Làm sao biết JS chỉ có Pass by value?
+00:25
+15.15 Trận chiến giữa Tom và Jerry
+12:44
+15.16 Thêm chỉ số "phòng thủ"
+07:50
+15.17 Function constructor
+10:00
+15.18 Tạo "bản thiết kế" Character
+09:00
+15.19 Tạo hàm bắt đầu trận chiến
+08:17
+15.20 Phát triển thêm chỉ số "tốc độ"
+08:52
+15.21 Phát triển chỉ số "phản công"
+09:08
+15.22 Xử lý trường hợp speed bằng nhau
+02:39
+15.23 Các hàm tạo dựng sẵn
+19:11
+15.24 Object prototypes
+18:29
+15.25 Cơ chế Autoboxing
+10:35
+15.26 Prototype chain
+37:46
+15.27 Cơ bản về Object.create()
+11:23
+15.28 Tìm hiểu toán tử instanceof
+09:48
+15.29 Tìm hiểu valueOf() và toString()
+25:54
+15.30 Thêm một cách kiểm tra kiểu dữ liệu
+16:19
+15.31 Tìm hiểu từ khóa this nâng cao
+16:57
+15.32 Phương thức bind, call và apply #1
+18:45
+15.33 Phương thức bind, call và apply #2
+19:33
+15.34 Tóm tắt chương
+01:00
+
+14. Objects cơ bản
+14.1 Object literals
+10:32
+14.2 Tạo hàm findMostFrequentNumber
+11:02
+14.3 Tại sao sửa được Object tạo bởi const
+03:08
+14.4 Tìm hiểu thuộc tính và phương thức
+09:26
+14.5 Tìm hiểu về từ khóa this cơ bản
+07:59
+14.6 Làm việc với Object cơ bản
+09:38
+14.7 Phương thức của Object #1
+11:27
+14.8 Phương thức của Object #2
+10:23
+14.9 Cách viết "switch" bằng Object
+14:48
+14.10 Tóm tắt chương
+01:00
+
+13. Vòng lặp (Loops)
+13.1 Vòng lặp For (For loop)
+16:16
+13.2 Định nghĩa vòng lặp là gì?
+00:14
+13.3 Khi nào nên dùng vòng lặp For?
+00:20
+13.4 Đâu là cú pháp vòng lặp For?
+00:14
+13.5 Viết điều kiện cho vòng lặp For?
+00:39
+13.6 Tạo hàm printNumbers
+03:05
+13.7 Tạo hàm reverseString
+08:03
+13.8 Tạo hàm findMax
+07:38
+13.9 Tổng hợp bài tập vòng lặp For #1
+09:52
+13.10 Tổng hợp bài tập vòng lặp For #2
+09:41
+13.11 Tổng hợp bài tập vòng lặp For #3
+10:32
+13.12 Tổng hợp bài tập vòng lặp For #4
+09:43
+13.13 Vòng lặp While (While loop)
+14:54
+13.14 Khi nào nên dùng vòng lặp While?
+00:14
+13.15 Viết điều kiện cho vòng lặp While?
+00:36
+13.16 Cập nhật biến trong vòng lặp While?
+00:26
+13.17 Sai lầm nào dẫn tới lặp vô hạn?
+00:19
+13.18 Tránh để xảy ra vòng lặp vô hạn?
+00:22
+13.19 Tạo hàm findGCD
+08:38
+13.20 Tạo hàm printFibonacci
+09:35
+13.21 Tạo hàm findFibonacci
+07:08
+13.22 Sử dụng vòng lặp duyệt mảng?
+00:38
+13.23 Tổng hợp bài tập duyệt mảng #1
+09:50
+13.24 Tổng hợp bài tập duyệt mảng #2
+04:38
+13.25 Tạo hàm findMissingNumber
+06:25
+13.26 Vòng lặp Do-While
+03:45
+13.27 Vòng lặp lồng nhau
+07:59
+13.28 Tạo hàm printMultiplicationTable
+06:04
+13.29 Lệnh Break và Continue
+13:48
+13.30 Vòng lặp For-in và For-of
+20:54
+13.31 Ứng dụng của toán tử ++i
+11:54
+13.32 Tóm tắt chương
+01:00
+
+12. Toán tử Logical nâng cao
+12.1 Toán tử Logical nâng cao
+16:58
+12.2 Kiểu dữ liệu trả về của AND và OR?
+00:21
+12.3 Đoán kết quả của toán tử AND đơn giản
+00:21
+12.4 Đoán kết quả của toán tử AND kết hợp
+00:23
+12.5 Đoán kết quả của toán tử OR đơn giản
+00:13
+12.6 Đoán kết quả của toán tử OR kết hợp
+00:17
+12.7 Gán giá trị mặc định cho biến?
+00:32
+12.8 Tối ưu hàm kiểm tra Object
+04:57
+12.9 Tạo hàm showMessage
+05:00
+12.10 Toán tử Nullish Coalescing
+12:37
+12.11 Kết quả của toán tử Nullish?
+00:14
+12.12 Phân biệt toán tử Nullish và OR?
+00:32
+12.13 Cách dùng Nullish nào chưa đúng?
+00:22
+12.14 Đặt giá trị mặc định cho biến?
+00:25
+12.15 Giá trị mặc định khi truy cập mảng?
+00:35
+12.16 Sử dụng toán tử logic phù hợp?
+00:35
+12.17 Tạo hàm getElement
+02:32
+12.18 Tạo hàm validateAge
+11:48
+12.19 Tạo hàm formatName
+06:43
+12.20 Tóm tắt chương
+01:00
+
+11. Truthy và Falsy
+11.1 Truthy và Falsy
+06:07
+11.2 Kiểm tra một chuỗi không rỗng?
+00:27
+11.3 Kiểm tra một biến là số khác 0?
+00:34
+11.4 Viết hàm isTruthy
+03:08
+11.5 Tóm tắt chương
+01:00
+
+10. Ép kiểu (Type coercion)
+10.1 Ép kiểu (Type coercion)
+40:16
+10.2 Kết quả của Boolean("false") là gì?
+00:29
+10.3 Kết quả của 1 == true là gì?
+00:26
+10.4 Tạo hàm convertTypes
+07:00
+10.5 Tạo hàm calculate
+11:20
+10.6 Tóm tắt chương
+
+9. Kiểu dữ liệu (Data types)
+9.1 Kiểu dữ liệu trong JavaScript
+30:43
+9.2 Lưu trữ thông tin người dùng?
+00:15
+9.3 Lưu trữ danh sách sản phẩm?
+00:13
+9.4 Kiểu dữ liệu nào không trả về "object"?
+00:27
+9.5 Kiểm tra kiểu dữ liệu của một biến?
+00:26
+9.6 Tạo hàm checkDataType
+02:04
+9.7 Tạo hàm compareDataTypes
+02:18
+9.8 Tạo hàm createUser
+03:14
+9.9 Tạo hàm createArrayFromArgs
+04:45
+9.10 Cách kiểm tra kiểu dữ liệu
+13:12
+9.11 Kiểm tra một số là hợp lệ?
+00:31
+9.12 Kiểm tra một biến có giá trị null?
+00:23
+9.13 Kiểm tra biến là một mảng?
+00:20
+9.14 Kiểm tra một biến là Object?
+00:25
+9.15 Kiểm tra một giá trị là Function?
+00:18
+9.16 Viết hàm kiểm tra kiểu dữ liệu
+12:09
+9.17 Bài tập kiểm tra kiểu dữ liệu
+10:28
+9.18 Toán tử void là gì?
+10:15
+9.19 Kết quả của void là gì?
+00:09
+9.20 Sử dụng void(0) với thẻ a làm gì?
+00:15
+9.21 Tại sao dùng void(0) thay cho undefined?
+00:18
+9.22 Tạo hàm isValueUndefined
+02:26
+9.23 Tóm tắt chương
+01:00
+
+8. Phạm vi (Scope)
+8.1 Phạm vi (Scope)
+35:18
+8.2 Cách khai báo biến toàn cục?
+00:22
+8.3 Đặc điểm của phạm vi hàm?
+00:28
+8.4 Phạm vi khi khai báo với let và const?
+00:16
+8.5 Khi var được khai báo trong block?
+00:31
+8.6 Vấn đề khi sử dụng biến toàn cục?
+00:18
+8.7 Khai báo biến ở phạm vi hàm
+01:02
+8.8 Xác định giá trị của một biến #1
+00:44
+8.9 Xác định giá trị của một biến #2
+00:46
+8.10 Xác định giá trị của một biến #3
+00:47
+8.11 Cách sử dụng ES6 modules?
+00:40
+8.12 Sửa lỗi khi sử dụng module #1
+01:59
+8.13 Sửa lỗi khi sử dụng module #2
+04:35
+8.14 Tóm tắt chương
+01:00
+
+7. Toán tử Logical cơ bản
+7.1 Toán tử Logical cơ bản
+24:04
+7.2 Độ ưu tiên của toán tử Logical?
+00:21
+7.3 Tạo hàm isSchoolAge
+03:07
+7.4 Tạo hàm isHealthy
+04:16
+7.5 Tạo hàm canAttendTechSeminar
+03:33
+7.6 Tổng hợp bài tập toán tử Logical #1
+07:06
+7.7 Tổng hợp bài tập toán tử Logical #2
+11:48
+7.8 Tổng hợp bài tập toán tử Logical #3
+09:17
+7.9 Tóm tắt chương
+01:00
+
+6. Câu lệnh điều kiện
+6.1 Câu lệnh điều kiện
+31:36
+6.2 Phép so sánh trả về kiểu dữ liệu gì?
+00:14
+6.3 Chọn điều kiện ngắn nhất?
+00:45
+6.4 Điểm khác của so sánh nghiêm ngặt?
+00:23
+6.5 Sử dụng toán tử so sánh phù hợp?
+01:04
+6.6 Nên dùng so sánh nghiêm ngặt hay không?
+00:22
+6.7 If else mấy điều kiện đúng chạy đồng thời?
+00:18
+6.8 Tạo hàm convertNumberToMonth #1
+07:46
+6.9 Tạo hàm checkEvenOdd
+04:09
+6.10 Tạo hàm checkInteger
+06:15
+6.11 Tạo hàm compareNumbers
+04:25
+6.12 Tạo hàm checkAge
+02:14
+6.13 Tạo hàm calculateShipping
+06:47
+6.14 Tạo hàm classifyStudent
+04:46
+6.15 Tạo hàm gradeExam
+04:46
+6.16 Tạo hàm calculateDiscount
+05:45
+6.17 Câu lệnh switch case
+16:45
+6.18 Tạo hàm convertNumberToMonth #2
+06:22
+6.19 Tạo hàm simpleCalculator
+07:46
+6.20 Tạo hàm identifyFruit
+04:44
+6.21 Tạo hàm gradeStudent
+05:25
+6.22 Tóm tắt chương
+01:00
+
+5. Nối chuỗi và nội suy
+5.1 Nối chuỗi và nội suy
+15:55
+5.2 Tạo chuỗi với dấu nháy?
+00:33
+5.3 Khi nào nên dùng Template literals?
+00:25
+5.4 Nháy đơn trong chuỗi nháy đơn?
+00:36
+5.5 Xuống dòng trong chuỗi nháy kép?
+00:20
+5.6 Nội suy với Template literals?
+00:27
+5.7 Tạo hàm formatQuote
+05:20
+5.8 Tạo hàm createLink
+04:01
+5.9 Tạo hàm calculateTotalScore
+04:35
+5.10 Tóm tắt chương
+01:00
+
+4. Toán tử và hàm
+4.1 Toán tử số học và toán tử gán
+10:02
+4.2 Hàm (Functions)
+21:57
+4.3 Từ khóa tạo hàm?
+00:17
+4.4 Hoàn thiện khai báo hàm?
+00:20
+4.5 Tạo hàm multiply
+01:37
+4.6 Tạo hàm double
+01:10
+4.7 Tạo hàm cToF
+01:56
+4.8 Tạo các hàm tính diện tích
+03:20
+4.9 Tạo hàm swapNumbers
+06:11
+4.10 Hiểu về toán tử ++i và i++
+06:16
+4.11 Các loại hàm trong JavaScript
+08:49
+4.12 Hiểu về khái niệm Hoisting
+09:47
+
+3. Biến (Variables)
+3.1 Biến (Variables)
+16:21
+3.2 Biến dùng để làm gì?
+00:19
+3.3 Khi nào khai báo biến với let?
+00:14
+3.4 Khai báo biến có thể thay đổi
+00:16
+3.5 Thực hành khai báo biến
+01:55
+3.6 Gán lại và in ra giá trị
+01:04
+3.7 Hoán đổi giá trị hai biến
+03:27
+3.8 Tóm tắt chương
+01:00
+
+2. Tìm hiểu về JavaScript
+2.1 JavaScript là gì?
+15:34
+2.2 JavaScript viết tắt là gì?
+00:08
+2.3 JavaScript có thể làm gì?
+00:12
+2.4 JavaScript thuộc loại nào?
+00:20
+2.5 Sử dụng JavaScript cho trang web
+15:55
+2.6 Thẻ nào để chèn JavaScript?
+00:09
+2.7 Cách chèn JavaScript bên ngoài?
+00:11
+2.8 Cách sử dụng thẻ script?
+00:27
+2.9 Thuộc tính chèn JavaScript bên ngoài?
+00:16
+2.10 Hướng dẫn cách làm bài tập
+04:53
+2.11 JavaScript: Hello world
+01:02
+2.12 Cách sử dụng Flashcards
+01:55
+2.13 Tóm tắt chương
+01:00
